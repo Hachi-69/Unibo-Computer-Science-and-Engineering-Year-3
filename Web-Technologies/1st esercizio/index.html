@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserimento Dati</title>
+</head>
+
+<body>
+    <header>
+        <h1> Inserimento Dati </h1>
+    </header>
+
+    <div>
+        <main>
+            <h2> Informazioni Anagrafiche </h2>
+            <form action="#" method="post">
+                <ul>
+                    <li>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" autocomplete="name" required>
+                    </li>
+                    <li>
+                        <label for="cognome">Cognome:</label>
+                        <input type="text" id="cognome" name="cognome" autocomplete="family-name" required>
+                    </li>
+                    <li>
+                        <label for="codiceFiscale">Codice Fiscale:</label>
+                        <input type="text" id="codiceFiscale" name="codiceFiscale" autocomplete="fiscal-code" required>
+                    </li>
+                    <li>
+                        <label for="dataNascita">Data di Nascita:</label>
+                        <input type="date" id="dataNascita" name="dataNascita" autocomplete="bday" required>
+                    </li>
+                    <li>
+                        <label for="luogoNascita">Luogo di Nascita:</label>
+                        <input type="text" id="luogoNascita" name="luogoNascita" autocomplete="address-line1" required>
+                    </li>
+                    <li>
+                        <label for="indirizzo">Indirizzo:</label>
+                        <input type="text" id="indirizzo" name="indirizzo" autocomplete="address-line2" required>
+                    </li>
+                </ul>
+            </form>
+
+            <h2> Preferenze </h2>
+            <form action="#" method="post">
+                <ul>
+                    <li>
+                        <fieldset>
+                            <legend>Assicurazione:</legend>
+
+                            <input type="radio" id="primoLivello" name="assicurazione" value="primo">
+                            <label for="primoLivello">Primo Livello</label>
+
+                            <input type="radio" id="secondoLivello" name="assicurazione" value="secondo">
+                            <label for="secondoLivello">Secondo Livello</label>
+
+                            <input type="radio" id="terzoLivello" name="assicurazione" value="terzo">
+                            <label for="terzoLivello">Terzo Livello</label>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <legend>Mezzo Preferito:</legend>
+
+                            <select id="mezzoPreferito" name="mezzoPreferito" autocomplete="transport" required>
+                                <option value="">Seleziona un mezzo</option>
+                                <option value="auto">Auto</option>
+                                <option value="moto">Moto</option>
+                                <option value="bicicletta">Bicicletta</option>
+                                <option value="Monopattino">Monopattino</option>
+                            </select>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <fieldset>
+                            <legend>Automunito:</legend>
+
+                            <label for="automunito">Automunito:</label>
+                            <input type="checkbox" id="automunito" name="automunito">
+                        </fieldset>
+                    </li>
+                    <li>
+                        <label for="descrizione">Descrizione:</label>
+                        <textarea id="descrizione" name="descrizione" autocomplete="description" rows="4" cols="50" required></textarea>
+                    </li>
+                </ul>
+                <button type="submit">Invia</button>
+                <button type="reset">Cancella</button>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>

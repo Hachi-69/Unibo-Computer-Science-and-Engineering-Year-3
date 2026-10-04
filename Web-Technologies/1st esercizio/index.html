@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inserimento Dati</title>
+    <title>Contatti</title>
 </head>
 
 <body>
     <header>
-        <h1> Inserimento Dati </h1>
+        <h1>Contatti</h1>
     </header>
 
-    <div>
-        <main>
-            <h2> Informazioni Anagrafiche </h2>
-            <form action="#" method="post">
+    <main>
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Informazioni Anagrafiche</legend>
                 <ul>
                     <li>
                         <label for="nome">Nome:</label>
@@ -27,7 +28,7 @@
                     </li>
                     <li>
                         <label for="codiceFiscale">Codice Fiscale:</label>
-                        <input type="text" id="codiceFiscale" name="codiceFiscale" autocomplete="fiscal-code" required>
+                        <input type="text" id="codiceFiscale" name="codiceFiscale" autocomplete="off" required>
                     </li>
                     <li>
                         <label for="dataNascita">Data di Nascita:</label>
@@ -42,16 +43,16 @@
                         <input type="text" id="indirizzo" name="indirizzo" autocomplete="address-line2" required>
                     </li>
                 </ul>
-            </form>
+            </fieldset>
 
-            <h2> Preferenze </h2>
-            <form action="#" method="post">
+            <fieldset>
+                <legend>Preferenze</legend>
                 <ul>
                     <li>
                         <fieldset>
                             <legend>Assicurazione:</legend>
 
-                            <input type="radio" id="primoLivello" name="assicurazione" value="primo">
+                            <input type="radio" id="primoLivello" name="assicurazione" value="primo" required>
                             <label for="primoLivello">Primo Livello</label>
 
                             <input type="radio" id="secondoLivello" name="assicurazione" value="secondo">
@@ -62,36 +63,33 @@
                         </fieldset>
                     </li>
                     <li>
-                        <fieldset>
-                            <legend>Mezzo Preferito:</legend>
-
-                            <select id="mezzoPreferito" name="mezzoPreferito" autocomplete="transport" required>
-                                <option value="">Seleziona un mezzo</option>
-                                <option value="auto">Auto</option>
-                                <option value="moto">Moto</option>
-                                <option value="bicicletta">Bicicletta</option>
-                                <option value="Monopattino">Monopattino</option>
-                            </select>
-                        </fieldset>
+                        <label for="mezzoPreferito">Mezzo Preferito:</label>
+                        <select id="mezzoPreferito" name="mezzoPreferito" autocomplete="off" required>
+                            <option value="">Seleziona un mezzo</option>
+                            <option value="automobile">Automobile</option>
+                            <option value="moto">Moto</option>
+                            <option value="bicicletta">Bicicletta</option>
+                            <option value="monopattino">Monopattino</option>
+                        </select>
                     </li>
                     <li>
-                        <fieldset>
-                            <legend>Automunito:</legend>
-
-                            <label for="automunito">Automunito:</label>
-                            <input type="checkbox" id="automunito" name="automunito">
-                        </fieldset>
+                        <input type="checkbox" id="automunito" name="automunito">
+                        <label for="automunito">Automunito</label>
                     </li>
                     <li>
                         <label for="descrizione">Descrizione:</label>
-                        <textarea id="descrizione" name="descrizione" autocomplete="description" rows="4" cols="50" required></textarea>
+                        <br>
+                        <textarea id="descrizione" name="descrizione" autocomplete="off" rows="4" cols="50"
+                            required></textarea>
                     </li>
                 </ul>
-                <button type="submit">Invia</button>
-                <button type="reset">Cancella</button>
-            </form>
-        </main>
-    </div>
+            </fieldset>
+
+            <button type="submit">Invia</button>
+            <button type="reset">Cancella</button>
+
+        </form>
+    </main>
 </body>
 
 </html>

@@ -42,7 +42,47 @@
       --shadow-soft: 0 10px 30px rgb(0 0 0 / 0.12);
     }
 
-    /* TODO 2: qui, dentro @layer components, una regola con @apply per ogni nome semantico */
+    @layer components {
+      .program {
+        @apply max-w-5xl mx-auto px-4 md:px-8 py-12;
+      }
+
+      .program-title {
+        @apply font-display text-4xl text-stone-900 mb-8;
+      }
+
+      .talks {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+      }
+
+      .talk {
+        @apply relative bg-white rounded-card shadow-soft overflow-hidden;
+      }
+
+      .talk-cover {
+        @apply h-32 flex items-center justify-center bg-brand-100 text-brand-800 text-2xl font-bold;
+      }
+
+      .talk-badge {
+        @apply absolute top-3 right-3 bg-orange-700 text-white text-xs font-bold uppercase px-2 py-1 rounded-full;
+      }
+
+      .talk-body {
+        @apply p-5;
+      }
+
+      .talk-title {
+        @apply text-lg font-semibold text-stone-900;
+      }
+
+      .talk-text {
+        @apply mt-1 text-stone-600;
+      }
+
+      .talk-meta {
+        @apply mt-4 flex justify-between text-sm text-stone-500;
+      }
+    }
   </style>
 </head>
 <body class="bg-stone-100">
@@ -50,38 +90,38 @@
        section → program · h2 → program-title · griglia → talks · article → talk
        copertina → talk-cover · badge → talk-badge · corpo della card → talk-body
        h3 → talk-title · descrizione → talk-text · orario e aula → talk-meta -->
-  <section id="programma" class="max-w-5xl mx-auto px-4 md:px-8 py-12">
-    <h2 class="font-display text-4xl text-stone-900 mb-8">Programma</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="relative bg-white rounded-card shadow-soft overflow-hidden">
-        <div class="h-32 flex items-center justify-center bg-brand-100 text-brand-800 text-2xl font-bold">HTML</div>
-        <span class="absolute top-3 right-3 bg-orange-700 text-white text-xs font-bold uppercase px-2 py-1 rounded-full">Nuovo</span>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-stone-900">Pagine accessibili</h3>
-          <p class="mt-1 text-stone-600">Struttura semantica e attributi ARIA, con esempi pratici.</p>
-          <div class="mt-4 flex justify-between text-sm text-stone-500">
+  <section id="programma" class="program">
+    <h2 class="program-title">Programma</h2>
+    <div class="talks">
+      <article class="talk">
+        <div class="talk-cover">HTML</div>
+        <span class="talk-badge">Nuovo</span>
+        <div class="talk-body">
+          <h3 class="talk-title">Pagine accessibili</h3>
+          <p class="talk-text">Struttura semantica e attributi ARIA, con esempi pratici.</p>
+          <div class="talk-meta">
             <span>10:00</span>
             <span>Aula 1</span>
           </div>
         </div>
       </article>
-      <article class="relative bg-white rounded-card shadow-soft overflow-hidden">
-        <div class="h-32 flex items-center justify-center bg-brand-100 text-brand-800 text-2xl font-bold">CSS</div>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-stone-900">Layout con grid</h3>
-          <p class="mt-1 text-stone-600">Dalle colonne alle aree: impaginare senza fatica.</p>
-          <div class="mt-4 flex justify-between text-sm text-stone-500">
+      <article class="talk">
+        <div class="talk-cover">CSS</div>
+        <div class="talk-body">
+          <h3 class="talk-title">Layout con grid</h3>
+          <p class="talk-text">Dalle colonne alle aree: impaginare senza fatica.</p>
+          <div class="talk-meta">
             <span>11:30</span>
             <span>Aula 2</span>
           </div>
         </div>
       </article>
-      <article class="relative bg-white rounded-card shadow-soft overflow-hidden">
-        <div class="h-32 flex items-center justify-center bg-brand-100 text-brand-800 text-2xl font-bold">JS</div>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-stone-900">Dati da un'API</h3>
-          <p class="mt-1 text-stone-600">Caricare dati da un server e mostrarli nella pagina.</p>
-          <div class="mt-4 flex justify-between text-sm text-stone-500">
+      <article class="talk">
+        <div class="talk-cover">JS</div>
+        <div class="talk-body">
+          <h3 class="talk-title">Dati da un'API</h3>
+          <p class="talk-text">Caricare dati da un server e mostrarli nella pagina.</p>
+          <div class="talk-meta">
             <span>14:00</span>
             <span>Aula 1</span>
           </div>

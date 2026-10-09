@@ -28,7 +28,7 @@
   <header class="sticky top-0 flex items-center justify-between bg-white border-b border-stone-200 px-8 py-4">
     <a href="#" class="text-xl font-bold text-teal-700">TW Day</a>
     <!-- TODO 3: menu nascosto sul telefono, visibile da 768px -->
-    <nav class="flex gap-8 font-medium text-stone-600">
+    <nav class="flex gap-8 font-medium text-stone-600 hidden md:flex">
       <a href="#programma">Programma</a>
       <a href="#speaker">Speaker</a>
       <a href="#luogo">Luogo</a>
@@ -38,7 +38,7 @@
   <main>
     <!-- TODO 4: hero centrato sul telefono, allineato a sinistra da 768px -->
     <!-- TODO 5: meno spazio ai lati sugli schermi piccoli -->
-    <section class="max-w-5xl mx-auto px-8 py-20">
+    <section class="max-w-5xl mx-auto py-20 text-xl md:text-4xl text-center md:text-left px-4 md:px-8">
       <p class="text-sm font-semibold uppercase tracking-widest text-teal-700">15 maggio 2027 · Aula Magna</p>
       <!-- TODO 4: titolo più piccolo sul telefono -->
       <h1 class="mt-2 text-5xl font-bold text-stone-900">TW Day 2027</h1>
@@ -52,7 +52,7 @@
     <section id="programma" class="max-w-5xl mx-auto px-8 py-12">
       <h2 class="text-3xl font-bold text-stone-900 mb-8">Programma</h2>
       <!-- TODO 2: una colonna, poi due, poi tre -->
-      <div class="grid grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <article class="relative bg-white rounded-xl shadow overflow-hidden">
           <div class="h-32 flex items-center justify-center bg-teal-100 text-teal-800 text-2xl font-bold">HTML</div>
           <span class="absolute top-3 right-3 bg-orange-700 text-white text-xs font-bold uppercase px-2 py-1 rounded-full">Nuovo</span>

@@ -18,25 +18,29 @@
   Il risultato atteso è nella slide dell'esercizio.
 -->
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TW Day 2027 · 02 La card dello speaker</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+
+<body class="bg-stone-100 p-10">
   <!-- TODO 1: pagina grigio chiaro, con spazio intorno (classi sul body) -->
   <!-- TODO 2: card bianca, larga al massimo 24rem e centrata -->
   <!-- TODO 3: bordo sottile, angoli arrotondati e ombra -->
-  <article>
+  <article class="max-w-sm mx-auto bg-white p-8 text-center border border-stone-200 rounded-2xl shadow-md">
     <!-- TODO 4: foto rotonda e centrata nella card -->
-    <img src="avatar.svg" alt="Foto di Giulia Rossi">
-    <h2>Giulia Rossi</h2>
+    <img src="avatar.svg" alt="Foto di Giulia Rossi" class="size-24 rounded-full mx-auto">
+    <h2 class="text-3xl font-bold m-4">Giulia Rossi</h2>
     <!-- TODO 5: ruolo in maiuscolo -->
-    <p>Speaker · Frontend developer</p>
-    <p>Racconta come ha costruito il sito del suo progetto d'esame scrivendo pochissimo CSS.</p>
+    <p class="uppercase tracking-wide text-teal-700 font-semibold tracking-wide">Speaker · Frontend developer</p>
+    <p class="text-stone-600 mt-3">Racconta come ha costruito il sito del suo progetto d'esame scrivendo pochissimo CSS.</p>
     <!-- TODO 5: bottone con solo il bordo -->
-    <a href="#">Segui</a>
+    <a href="#"
+      class="border-2 rounded-full inline-block px-5 py-2 text-sm font-medium text-teal-700 hover:bg-teal-100 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 mt-4 font-bold">Segui</a>
   </article>
 </body>
+
 </html>

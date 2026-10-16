@@ -160,3 +160,32 @@ aside img {
 footer {
     margin-top: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    nav {
+        margin: 0 10%;
+    }
+
+    nav ul li {
+        width: 19%;
+    }
+
+    body>div {
+        display: flex;
+    }
+
+    body>div>main {
+        width: 50%;
+    }
+
+    div>aside {
+        width: 25%;
+        margin: 50px 10% 0 5%;
+    }
+
+    main>h2{
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+    }
+}

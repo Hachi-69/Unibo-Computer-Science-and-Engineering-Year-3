@@ -52,7 +52,8 @@ body>div>main {
 }
 
 main>article,
-main>section {
+main>section,
+main>form {
     background-color: #fff;
     border: 1px solid #d1d5db;
     border-radius: 10px;
@@ -76,7 +77,8 @@ main>article>p {
     font-size: 12px;
 }
 
-main>article>a {
+main>article>a,
+form input[type="submit"] {
     background-color: #2563eb;
     color: #fff;
     text-decoration: none;
@@ -84,7 +86,8 @@ main>article>a {
     border-radius: 6px;
 }
 
-main>section{
+main>section,
+main>form {
     padding: 20px 5%;
 }
 
@@ -93,7 +96,7 @@ main table {
     width: 100%;
 }
 
-main table th{
+main table th {
     background-color: #f3f4f6;
 }
 
@@ -101,6 +104,33 @@ main table th,
 main table td {
     border: 1px solid #d1d5db;
 
+}
+
+form ul {
+    width: 80%;
+    margin-left: 10%;
+}
+
+form label {
+    display: inline-block;
+    width: 50%;
+    cursor: pointer;
+}
+
+form ul li {
+    margin-bottom: 20px;
+}
+
+form ul li:last-child {
+    text-align: right;
+}
+
+form input:not([type="submit"]) {
+    width: 50%;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+    padding: 6px;
+    box-sizing: border-box;
 }
 
 aside {

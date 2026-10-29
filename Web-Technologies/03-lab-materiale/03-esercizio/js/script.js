@@ -33,73 +33,86 @@ class Autore {
         this.argomenti = argomenti;
     }
 
+    getCompleteName() {
+        return this.nome + " " + this.cognome;
+    }
+
     toConsole() {
-        console.log("Nome: " + this.nome);
-        console.log("Cognome: " + this.cognome);
+        console.log("Nome: " + this.getCompleteName());
         console.log("Email: " + this.email);
         console.log("Argomenti: " + this.argomenti);
     }
 
     toDOM() {
-        const authorTable = document.createElement("table");
-        const thead = document.createElement("thead");
-        const tbody = document.createElement("tbody");
-
         const tr = document.createElement("tr");
-        const th1 = document.createElement("th");
-        const th2 = document.createElement("th");
-        const th3 = document.createElement("th");
 
-        th1.setAttribute("scope", "col");
-        th2.setAttribute("scope", "col");
-        th3.setAttribute("scope", "col");
+        const nome = document.createElement("th");
+        nome.scope = "row";
+        nome.textContent = this.getCompleteName();
 
-        th1.textContent = "Autore";
-        th2.textContent = "Email";
-        th3.textContent = "Argomenti";
+        const email = document.createElement("td");
+        email.textContent = this.email;
 
-        tr.appendChild(th1);
-        tr.appendChild(th2);
-        tr.appendChild(th3);
+        const argomenti = document.createElement("td");
+        argomenti.textContent = this.argomenti;
 
-        thead.appendChild(tr);
-        authorTable.appendChild(thead);
+        tr.append(nome, email, argomenti);
 
-        const tr2 = document.createElement("tr");
-        const th4 = document.createElement("th");
-        const td1 = document.createElement("td");
-        const td2 = document.createElement("td");
-
-        th4.setAttribute("scope", "row");
-        th4.textContent = this.nome + " " + this.cognome;
-        td1.textContent = this.email;
-        td2.textContent = this.argomenti;
-
-        tr2.appendChild(th4);
-        tr2.appendChild(td1);
-        tr2.appendChild(td2);
-
-        tbody.appendChild(tr2);
-        authorTable.appendChild(tbody);
-
-        return authorTable;
+        return tr;
     }
 }
 
-const autori = JSON.parse(jsonAutori).map(autore => new Autore(autore.nome, autore.cognome, autore.email, autore.argomenti));
-const contenitore = document.querySelector("main section");
-autori.forEach(autore => {
-    autore.toConsole();
-    contenitore.appendChild(autore.toDOM());
-});
+class Autori {
+    constructor(autori) {
+        this.autori = autori;
+    }
 
-/**                <table>
-    <thead>
-        <tr><th scope="col">Autore</th><th scope="col">Email</th><th scope="col">Argomenti</th></tr>
-    </thead>
-    <tbody>
-        <tr><th scope="row">Gino Pino</th><td>ginopino@blogtw.com</td><td>HTML, CSS, JS</td></tr>
-        <tr><th scope="row">Cippa Lippa</th><td>cippalippa@blogtw.com</td><td>PHP</td></tr>
-    </tbody>
-</table>
-                 */
+    toConsole() {
+        this.autori.forEach(a => {
+            a.toConsole();
+        });
+    }
+
+    toDOM() {
+        const table = document.createElement("table");
+
+        const caption = document.createElement("caption");
+        caption.textContent = "Autori del blog";
+
+        const thead = document.createElement("thead");
+        const intestazione = document.createElement("tr");
+
+        const colonne = ["Nome e cognome", "Email", "Argomenti"];
+
+        colonne.forEach(c => {
+            const th = document.createElement("th");
+            th.scope = "col";
+            th.textContent = c;
+            intestazione.append(th);
+        });
+
+        thead.append(intestazione);
+
+        const tbody = document.createElement("tbody");
+
+        this.autori.forEach(e => {
+            tbody.append(e.toDOM());
+        });
+
+        table.append(caption, thead, tbody);
+
+        return table;
+    }
+}
+
+const dati = JSON.parse(jsonAutori);
+const elencoAutori = dati.map(a => new Autore(
+    a.nome, a.cognome, a.email, a.argomenti
+));
+
+const autori = new Autori(elencoAutori);
+
+autori.toConsole();
+
+const contenitore = document.querySelector("main > section");
+contenitore.append(autori.toDOM());

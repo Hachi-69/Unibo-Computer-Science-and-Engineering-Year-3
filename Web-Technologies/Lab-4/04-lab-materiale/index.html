@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog di Tecnologie Web</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="./js/router.js"></script>
+</head>
+<body>
+    <header><h1>Blog di Tecnologie Web</h1></header>
+    <nav aria-label="Navigazione principale">
+        <ul>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/archivio">Archivio</a></li>
+            <li><a href="#/contatti">Contatti</a></li>
+            <li><a href="#/login">Login</a></li>
+        </ul>
+    </nav>
+    <div class="layout">
+        <main id="app"></main>
+        <aside>
+            <section>
+                <h2>Post popolari</h2>
+                <ul class="popular-posts">
+                    <li><img src="./img/html5-js-css3.png" alt="" /><a href="#/articolo/1">Intro alle Tecnologie Web Client Side</a></li>
+                    <li><img src="./img/php.png" alt="" /><a href="#/articolo/2">Intro alle Tecnologie Web Server Side</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Categorie</h2>
+                <ul>
+                    <li><a href="#/archivio">HTML</a></li><li><a href="#/archivio">CSS</a></li>
+                    <li><a href="#/archivio">PHP</a></li><li><a href="#/archivio">JavaScript</a></li>
+                    <li><a href="#/archivio">jQuery</a></li><li><a href="#/archivio">Apache</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+    <footer><p>Tecnologie Web - A.A. 2026/2027</p></footer>
+</body>
+</html>

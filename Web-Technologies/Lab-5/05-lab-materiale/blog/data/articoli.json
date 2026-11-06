@@ -1,0 +1,122 @@
+[
+    {
+        "autore": "Gino Pino",
+        "data": "23 Ottobre 2026",
+        "titolo": "Intro alle Tecnologie Web Client Side",
+        "immagine": "./img/html5-js-css3.png",
+        "testo": "Le tecnologie client side permettono di costruire interfacce che vengono interpretate ed eseguite nel browser. HTML definisce la struttura del documento, CSS ne controlla la presentazione e JavaScript aggiunge comportamenti e interazioni. Separare questi tre livelli rende il progetto più semplice da leggere, modificare e mantenere. Quando un utente apre una pagina, il browser scarica le risorse necessarie, costruisce il DOM e applica le regole di stile. JavaScript può poi reagire agli eventi e aggiornare il contenuto senza richiedere necessariamente una nuova pagina. Questa combinazione costituisce la base delle applicazioni web moderne.",
+        "id": 1,
+        "categorie": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "autore": "Cippa Lippa",
+        "data": "23 Ottobre 2026",
+        "titolo": "Intro alle Tecnologie Web Server Side",
+        "immagine": "./img/php.png",
+        "testo": "Le tecnologie server side elaborano le richieste HTTP e preparano le risposte da inviare al browser. Un server web come Apache riceve la richiesta e può affidare l’elaborazione a un linguaggio come PHP. Il codice sul server può leggere parametri, interrogare un database e produrre HTML oppure dati JSON. A differenza del JavaScript eseguito nel browser, la logica server side non viene inviata direttamente al client. Questa separazione consente di centralizzare le regole applicative e proteggere le operazioni che richiedono controlli di accesso. Le API REST sono un esempio comune di interfaccia tra frontend e backend.",
+        "id": 2,
+        "categorie": [
+            "PHP",
+            "Apache"
+        ]
+    },
+    {
+        "autore": "Mario Rossi",
+        "data": "21 Ottobre 2026",
+        "titolo": "HTML semantico: dare significato alla pagina",
+        "immagine": "./img/html5-js-css3.png",
+        "testo": "HTML non serve soltanto a disporre contenuti sullo schermo: descrive anche il loro significato. Elementi come header, nav, main, article e footer permettono di identificare le diverse regioni di una pagina. Usare correttamente titoli, liste e collegamenti facilita la navigazione con tecnologie assistive e rende il codice più comprensibile. Un articolo di blog, per esempio, può contenere un titolo, una data di pubblicazione e un testo organizzato in paragrafi. La semantica dovrebbe guidare la scelta degli elementi, mentre l’aspetto grafico viene affidato ai fogli di stile. Una struttura chiara è il primo passo per un sito accessibile.",
+        "id": 3,
+        "categorie": [
+            "HTML"
+        ]
+    },
+    {
+        "autore": "Anna Bianchi",
+        "data": "19 Ottobre 2026",
+        "titolo": "CSS: layout responsive con Flexbox e Grid",
+        "immagine": "./img/html5-js-css3.png",
+        "testo": "Una pagina responsive deve adattarsi a schermi e dimensioni differenti senza perdere leggibilità. Flexbox è particolarmente adatto alla distribuzione di elementi lungo una direzione, per esempio in un menu di navigazione. CSS Grid permette invece di definire strutture a righe e colonne, utili per impaginazioni più articolate. Le media query consentono di modificare le regole quando cambia lo spazio disponibile. È importante progettare anche gli stati intermedi, non soltanto le versioni desktop e mobile. Separando la struttura HTML dal layout CSS, possiamo mantenere gli stessi contenuti e cambiare la presentazione in modo coerente.",
+        "id": 4,
+        "categorie": [
+            "CSS"
+        ]
+    },
+    {
+        "autore": "Gino Pino",
+        "data": "17 Ottobre 2026",
+        "titolo": "JavaScript e DOM: gestire gli eventi",
+        "immagine": "./img/html5-js-css3.png",
+        "testo": "Il Document Object Model rappresenta il documento HTML come una struttura di nodi accessibile da JavaScript. Con querySelector possiamo individuare un elemento e con addEventListener associare una funzione a un evento, come un click o l’invio di un form. Il codice può leggere valori, modificare il testo o aggiungere nuovi elementi alla pagina. È importante distinguere la registrazione della callback dal momento in cui viene eseguita. Quando le interfacce diventano complesse, aggiornare manualmente molti nodi può risultare difficile da gestire. I framework reattivi affrontano proprio questo problema, collegando la visualizzazione allo stato dei dati.",
+        "id": 5,
+        "categorie": [
+            "JavaScript",
+            "HTML"
+        ]
+    },
+    {
+        "autore": "Cippa Lippa",
+        "data": "15 Ottobre 2026",
+        "titolo": "PHP: elaborare richieste e restituire JSON",
+        "immagine": "./img/php.png",
+        "testo": "PHP può essere utilizzato per realizzare semplici endpoint HTTP senza introdurre necessariamente un framework. Lo script legge il metodo della richiesta, verifica gli eventuali parametri e prepara una risposta. Impostando l’intestazione Content-Type su application/json e utilizzando json_encode, il server può inviare dati strutturati al frontend. È importante restituire codici di stato coerenti, per esempio 200 quando la richiesta riesce e 404 quando una risorsa non esiste. I dati ricevuti dall’utente devono essere validati prima dell’utilizzo. Una piccola API per un blog può esporre l’elenco degli articoli e il dettaglio di un singolo articolo.",
+        "id": 6,
+        "categorie": [
+            "PHP"
+        ]
+    },
+    {
+        "autore": "Mario Rossi",
+        "data": "13 Ottobre 2026",
+        "titolo": "Accessibilità dei form HTML",
+        "immagine": "./img/accessibility.png",
+        "testo": "Un form accessibile permette a tutti gli utenti di comprendere quali informazioni sono richieste e come correggere eventuali errori. Ogni campo dovrebbe avere una label associata tramite gli attributi for e id. Gli errori di validazione devono essere comunicati con messaggi testuali chiari, non soltanto attraverso un colore. La navigazione da tastiera deve rimanere prevedibile e il focus visibile. Anche i suggerimenti di compilazione automatica, quando appropriati, migliorano l’esperienza d’uso. La validazione nel browser è utile per fornire un riscontro immediato, ma i controlli fondamentali devono essere ripetuti sul server.",
+        "id": 7,
+        "categorie": [
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        "autore": "Anna Bianchi",
+        "data": "11 Ottobre 2026",
+        "titolo": "jQuery: selettori ed eventi",
+        "immagine": "./img/html5-js-css3.png",
+        "testo": "jQuery è una libreria JavaScript che ha semplificato molte operazioni comuni nei browser, soprattutto quando le API native erano meno uniformi. Attraverso i selettori è possibile individuare elementi del documento, modificarne il contenuto e associare gestori di eventi. Per esempio, una funzione può reagire al click su un pulsante e aggiornare un messaggio nella pagina. Oggi molte di queste operazioni sono disponibili direttamente nelle API standard del DOM. Studiare jQuery rimane utile per comprendere progetti esistenti e confrontare differenti approcci alla manipolazione dell’interfaccia. Nei nuovi progetti è opportuno valutare se una dipendenza aggiuntiva sia davvero necessaria.",
+        "id": 8,
+        "categorie": [
+            "jQuery",
+            "JavaScript"
+        ]
+    },
+    {
+        "autore": "Cippa Lippa",
+        "data": "9 Ottobre 2026",
+        "titolo": "Apache: document root e configurazione locale",
+        "immagine": "./img/php.png",
+        "testo": "Apache HTTP Server può distribuire file statici e collaborare con PHP per generare risposte dinamiche. La document root indica la cartella dalla quale vengono servite le risorse del sito. Durante lo sviluppo locale è importante distinguere il percorso sul disco dall’URL utilizzato dal browser. Il server interpreta le richieste HTTP e restituisce risorse con intestazioni e codici di stato appropriati. Una configurazione errata dei percorsi può causare risposte 404 anche quando il file esiste. Comprendere il ruolo del server web aiuta a diagnosticare problemi di caricamento di script, fogli di stile e richieste fetch.",
+        "id": 9,
+        "categorie": [
+            "Apache",
+            "PHP"
+        ]
+    },
+    {
+        "autore": "Anna Bianchi",
+        "data": "7 Ottobre 2026",
+        "titolo": "Dalle pagine tradizionali alle SPA con Vue",
+        "immagine": "./img/html5-js-css3.png",
+        "testo": "Nelle applicazioni multipagina, la navigazione porta normalmente al caricamento di un nuovo documento HTML. In una Single Page Application, invece, il browser può mantenere il documento principale e aggiornare la vista corrente tramite JavaScript. Vue consente di descrivere l’interfaccia attraverso template collegati a dati reattivi. Vue Router associa gli URL alle viste e permette di gestire la navigazione senza riscrivere manualmente il contenuto della pagina. Le chiamate fetch continuano a recuperare i dati dal server, mentre i componenti si occupano di presentarli. Separare recupero dei dati e visualizzazione facilita il riutilizzo e la manutenzione del codice.",
+        "id": 10,
+        "categorie": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ]
+    }
+]
+

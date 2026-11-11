@@ -51,6 +51,14 @@ export function caricaArticoli() {
     return richiestaArticoli;
 }
 
+export async function caricaArticolo(id) {
+    const articoli = await caricaArticoli();
+
+    return articoli.find(
+        articolo => String(articolo.id) === String(id)
+    ) || null;
+}
+
 export function caricaAutori() {
     if (!richiestaAutori) {
         richiestaAutori = caricaJSON("./data/autori.json")

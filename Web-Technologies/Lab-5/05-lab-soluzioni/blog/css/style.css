@@ -273,3 +273,4 @@ main > .lista-articoli > article > a:hover {background:var(--color-primary-hover
 main > section > .filtri {display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:16px;}
 main > section > .filtri input, main > section > .filtri select {padding:7px;max-width:100%;}
 main .errore {color:#b91c1c;display:block;}
+.categorie a:not(:last-child)::after { content: ", "; }
